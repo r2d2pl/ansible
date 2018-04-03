@@ -1,0 +1,4 @@
+- name: Install packages
+  yum: name={{item}}
+  with_items:
+    - dstat 
