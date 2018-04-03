@@ -1,4 +1,6 @@
 - name: Install packages
-  yum: name={{item}}
+  dnf: 
+    name: "{{ item }}"
+    state: absent
   with_items:
     - dstat 
