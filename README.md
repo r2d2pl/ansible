@@ -1,4 +1,2 @@
 # ansible
-ansible various
-initial starting code
-after mod on fedka
+ansible various initial starting code after mod on fedka

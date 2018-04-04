@@ -1,7 +1,7 @@
 - name: Install packages
   dnf: 
     name: "{{ item }}"
-    state: absent
+    state: present
   with_items:
     - dstat 
     - htop
