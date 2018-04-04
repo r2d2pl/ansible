@@ -4,3 +4,4 @@
     state: absent
   with_items:
     - dstat 
+    - htop
