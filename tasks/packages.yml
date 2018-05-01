@@ -3,6 +3,9 @@
     packages:
       - dstat
       - htop
+      - perf
+      - tiptop
+      - sysstat
   dnf: 
     name: "{{ item }}"
     state: present
