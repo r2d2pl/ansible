@@ -6,6 +6,7 @@
       - perf
       - tiptop
       - sysstat
+      - atop
   dnf: 
     name: "{{ item }}"
     state: present
