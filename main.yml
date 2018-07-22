@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   become: true
-  #pre_tasks:
+  pre_tasks:
   tasks:
     - import_tasks: tasks/packages.yml
 ...
