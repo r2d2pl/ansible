@@ -7,6 +7,8 @@
       - tiptop
       - sysstat
       - atop
+      - lsscsi
+      - sg3_utils
   dnf: 
     name: "{{ item }}"
     state: present
