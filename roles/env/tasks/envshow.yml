@@ -3,4 +3,4 @@
   register: ll
 - debug: var=ll.stdout_lines
 - debug:
-    msg: "Hello master Im all Yours: {{ ansible_lsb }}"
+    msg: "Hello master Im all Yours: {{ ansible_lsb.description }}, my kernel is: {{ ansible_kernel}}"
