@@ -1,0 +1,12 @@
+---
+packages:
+  - dstat
+  - htop
+  - perf
+  - tiptop
+  - sysstat
+  - atop
+  - lsscsi
+  - sg3_utils
+  - pv
+...

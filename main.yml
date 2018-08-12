@@ -1,8 +1,15 @@
 ---
-- hosts: localhost
-  become: true
+- hosts: 127.0.0.1
+  connection: local
+  become: yes 
+  become_user: root
+  gather_facts: true
   pre_tasks:
+    - import_tasks: roles/env/tasks/envconf.yml
   tasks:
-    - import_tasks: tasks/packages.yml
+     - import_role:
+         name: env 
+#     - import_tasks: roles/env/tasks/packages_main.yml
+  post_tasks:
+#     - import_tasks: roles/env/tasks/envclean.yml
 ...
-#:)

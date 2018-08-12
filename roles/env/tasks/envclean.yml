@@ -1,0 +1,4 @@
+- name: delete cfg files :)
+  file:
+    path: /etc/profile.d/bashrc_addsr2d2.sh
+    state: absent

@@ -1,0 +1,7 @@
+- name: copy cfg files :)
+  copy:
+    src: /home/snake/ANSIBLE/work/roles/env/files/bashrc_addsr2d2.sh
+    dest: /etc/profile.d/bashrc_addsr2d2.sh
+    owner: root
+    group: root
+    mode: 644    

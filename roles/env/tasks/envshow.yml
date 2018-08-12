@@ -1,0 +1,6 @@
+- name: some debugs ;)
+  shell: "hostname; cat /proc/meminfo | grep MemT; lscpu|grep -m 1 CPU'('; lscpu|grep Core; lscpu|grep Socket"
+  register: ll
+- debug: var=ll.stdout_lines
+- debug:
+    msg: "Hello master Im all Yours: {{ ansible_lsb }}"
