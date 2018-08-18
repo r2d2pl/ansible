@@ -1,13 +1,17 @@
 history | awk 'BEGIN {FS="[ \t]+|\\|"} {print $3}' | sort | uniq 	:most used commands
-!! 	:last commnd
-!* 	:last command arguments
+!! 	:(rerun last command)
+!* 	:(reuse arguments from previous command)
+!$ 	:(use last argument of last command)
+shopt -s histappend 	:(allow multiple terminals to write to the history file)
 cd - 	:previous directory
 cp name{,.old}		:copy with copy :)
 for x in `seq 1 5`; do filename_${x}.txt; done
-command -V	:usefull info about given command
+command -V <some command binary>	:(tells you whether <some binary> is a built-in, binary or alias)
 echo > /dev/<udp or tcp>/<server ip>/<port>	:if open tehere is no output
 echo > /dev/tcp/192.168.99.99/22
-
+&& 	:(run second command if the first is successful)
+; 	:(run second command regardless of success of first one)
+2>&1 	:(redirect stdout and stderr to a file)
 
 ----------------------------------------->
 CTRL+z
