@@ -5,3 +5,5 @@
     owner: root
     group: root
     mode: 644    
+- name: set bash stage 1
+  shell: shopt -s histappend
