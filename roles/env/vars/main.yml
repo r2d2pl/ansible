@@ -9,4 +9,5 @@ packages:
   - lsscsi
   - sg3_utils
   - pv
+  - jq
 ...
