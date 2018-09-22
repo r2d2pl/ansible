@@ -6,17 +6,20 @@ shopt -s histappend 	:(allow multiple terminals to write to the history file)
 cd - 	:previous directory
 cp name{,.old}		:copy with copy :)
 for x in `seq 1 5`; do filename_${x}.txt; done
+
 command -V <some command binary>	:(tells you whether <some binary> is a built-in, binary or alias)
+
 echo > /dev/<udp or tcp>/<server ip>/<port>	:if open tehere is no output
 echo > /dev/tcp/192.168.99.99/22
+
 && 	:(run second command if the first is successful)
 ; 	:(run second command regardless of success of first one)
 2>&1 	:(redirect stdout and stderr to a file)
 
------------------------------------------>
+-----------------------------------------> BASH:
 CTRL+z
-CTRL+s, exit CTRL+ q
------------------------------------------>
+CTRL+s, exit CTRL+ q			#XOFF - pause sending data
+
 KEYWORDS:
     ctrl + _ (undo)
     ctrl + t (swap two characters)
@@ -34,8 +37,7 @@ KEYWORDS:
     ctrl + k (cuts everything after the cursor)
     ctrl + y (pastes from the buffer)
     ctrl + l (clears screen)s
------------------------------------------>
-COLORS:
+-----------------------------------------> COLORS:
 # enable colors
 eval "`dircolors -b`"
 
@@ -56,4 +58,15 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;42;30m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
+-----------------------------------------> TMUX:
+set prefix C-a 
+set -g mouse on
+set synchronize-panes
+
+For your .tmux.conf:
+# You probably already put this in
+set prefix C-a
+unbind-key C-b
+bind-key C-a send-prefix
 ----------------------------------------->
+

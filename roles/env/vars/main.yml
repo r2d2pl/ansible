@@ -1,13 +1,25 @@
 ---
 packages:
+#mon$stats
   - dstat
   - htop
   - perf
   - tiptop
   - sysstat
   - atop
+  - pv
+  - iostat
+  - itop
+  - iotop
+  - iftop
+  - nethogs
+#tools
+  #json query / processor (sed)
+  - jq
+  #progres data monitor with pipe
+  - pv
   - lsscsi
   - sg3_utils
-  - pv
-  - jq
+
+
 ...
