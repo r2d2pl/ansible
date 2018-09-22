@@ -3,6 +3,7 @@ packages:
 #mon$stats
   - dstat
   - htop
+  - smem
   - perf
   - tiptop
   - sysstat

@@ -16,7 +16,9 @@ echo > /dev/tcp/192.168.99.99/22
 ; 	:(run second command regardless of success of first one)
 2>&1 	:(redirect stdout and stderr to a file)
 
------------------------------------------> BASH:
+nohup myprogram.sh &
+
+-----------------------------------------> BASH ++ :):
 CTRL+z
 CTRL+s, exit CTRL+ q			#XOFF - pause sending data
 
@@ -68,5 +70,26 @@ For your .tmux.conf:
 set prefix C-a
 unbind-key C-b
 bind-key C-a send-prefix
+-----------------------------------------> VIM:
+To set the number of spaces to display for a tab:
+set tabstop=2
+set number
+set showmatch
+To highlight the searched term in a file:
+set hlsearch
+To search without considering ignorecase when both ignorecase and smartcase are set and the search pattern contains uppercase:
+set smartcase
+To display a permanent status bar at the bottom of the vim screen showing the filename, row number, column number, etc.:
+set laststatus=2
+colorsheme
+	cat ~/.vimrc
+colorscheme koehler
+set tabstop=2
+set number
+set showmatch
+set hlsearch
+set smartcase
+set laststatus=2
 ----------------------------------------->
+
 
